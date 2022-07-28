@@ -1,0 +1,191 @@
+/**---------------------- */
+/**       RESET           */
+/**---------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/**---------------------- */
+/**     CUSTOM PROPS      */
+/**---------------------- */
+:root {
+  /* COLORS */
+  --clr-orange: 25, 97%, 53%;
+  --clr-white: 0, 0%, 100%;
+  --clr-light-grey: 217, 12%, 63%;
+  --clr-medium-grey: 216, 12%, 54%;
+  --clr-dark-blue: 213, 19%, 18%;
+  --clr-very-dark-blue: 216, 12%, 8%;
+
+  /* FONT SIZES */
+  --fs-default: 15px;
+
+  /* FONT FAMILIES */
+  --ff-overpass: 'Overpass', sans-serif;
+
+  /* BREAKPOINTS */
+  --bp-sm: 23.4375em;
+  --bp-md: 48em;
+  --bp-lg: 90em;
+}
+
+/**---------------------- */
+/**      UTILITIES        */
+/**---------------------- */
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+/**---------------------- */
+/**       GENERAL         */
+/**---------------------- */
+body {
+  background-color: hsl(var(--clr-very-dark-blue));
+  font-family: var(--ff-overpass);
+  font-size: var(--body-default);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.btn {
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+
+  transition: all 0.2s;
+}
+
+/**---------------------- */
+/**      SUDO CODE        */
+/**---------------------- */
+/* 
+- create a card with rounded edges a bit smaller than 375px
+- it is a 1-directional layout so use flexbox to align everything
+- add padding to rating card
+- use a pseudo element for the icon star, it should have a circular border radius and a lighter version of the card background (or perhaps a lighter shade of the star)
+- each rating star should use flexbox to center the number, should have a round border radius and should either have a padding or width/height
+- submit button should be set to stretch
+*/
+
+/**---------------------- */
+/**     RATING CARD       */
+/**---------------------- */
+/* FIXME: It seems like the background might actually be a gradient? The color of the star svg and the options from 1-5 should be darker */
+.rating-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+
+  background-color: hsl(var(--clr-dark-blue));
+  border-radius: 15px;
+  padding: 2rem;
+  position: relative;
+  width: 22.5rem;
+}
+
+.rating__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.rating__icon::after {
+  background-color: hsl(var(--clr-medium-grey));
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 100%;
+  opacity: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(2.5);
+  width: 100%;
+}
+
+.rating__title {
+  color: hsl(var(--clr-white));
+  font-weight: 400;
+}
+
+.rating__text {
+  color: hsl(var(--clr-medium-grey));
+}
+
+.rating__stars {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.rating__star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: hsl(var(--clr-medium-grey), 40%);
+  border-radius: 50%;
+  color: hsl(var(--clr-white), 40%);
+  cursor: pointer;
+  height: 3.125rem;
+  width: 3.125rem;
+}
+
+.rating__star:hover {
+  background-color: hsl(var(--clr-medium-grey), 100%);
+  color: hsl(var(--clr-white), 100%);
+}
+
+.rating__star:active {
+  background-color: hsl(var(--clr-orange));
+}
+
+.btn--orange {
+  align-self: stretch;
+
+  background-color: hsl(var(--clr-orange));
+  color: hsl(var(--clr-white));
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn--orange:hover {
+  background-color: hsl(var(--clr-orange), 80%);
+}
+
+.btn--orange:active {
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-orange));
+}
