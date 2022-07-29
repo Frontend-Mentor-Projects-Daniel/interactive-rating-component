@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./develop/images/favicon-32x32.png"
+      href="../images/favicon-32x32.png"
     />
 
     <!-- google fonts -->
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../css/style.css" />
 
     <!-- custom JS -->
-    <link rel="stylesheet" href="../js/script.js" />
+    <script src="../js/script.js" defer></script>
 
     <title>Frontend Mentor | Interactive rating component</title>
 
@@ -38,7 +38,6 @@
     </style>
   </head>
   <body>
-    <!-- TODO: Delete the un-needed classes if they are simply sharing the rating card's classes -->
     <main class="main">
       <div class="rating-card rating-card--thankyou">
         <!-- image -->
@@ -48,7 +47,7 @@
 
         <!-- user rating selection text -->
         <p class="rating-card--thankyou__selection">
-          You selected <span data-rating-selection>4</span> out of 5
+          You selected <span data-rating-selection></span> out of 5
         </p>
 
         <!-- thank you title -->
@@ -60,6 +59,7 @@
           more support, don’t hesitate to get in touch!
         </p>
       </div>
+      <a href="../../index.html" style="color: white">Re-do Selection</a>
     </main>
 
     <div class="attribution">
