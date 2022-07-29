@@ -98,7 +98,6 @@ body {
 /**---------------------- */
 /**     RATING CARD       */
 /**---------------------- */
-/* FIXME: It seems like the background might actually be a gradient? The color of the star svg and the options from 1-5 should be darker */
 .rating-card {
   display: flex;
   flex-direction: column;
