@@ -96,18 +96,6 @@ body {
 }
 
 /**---------------------- */
-/**      SUDO CODE        */
-/**---------------------- */
-/* 
-- create a card with rounded edges a bit smaller than 375px
-- it is a 1-directional layout so use flexbox to align everything
-- add padding to rating card
-- use a pseudo element for the icon star, it should have a circular border radius and a lighter version of the card background (or perhaps a lighter shade of the star)
-- each rating star should use flexbox to center the number, should have a round border radius and should either have a padding or width/height
-- submit button should be set to stretch
-*/
-
-/**---------------------- */
 /**     RATING CARD       */
 /**---------------------- */
 /* FIXME: It seems like the background might actually be a gradient? The color of the star svg and the options from 1-5 should be darker */
@@ -206,4 +194,22 @@ body {
 .btn--orange:active {
   background-color: hsl(var(--clr-white));
   color: hsl(var(--clr-orange));
+}
+
+/**---------------------- */
+/**    THANKYOU CARD      */
+/**---------------------- */
+.rating-card--thankyou {
+  align-items: center;
+}
+
+.rating-card--thankyou__selection {
+  background-color: hsl(var(--clr-medium-grey), 30%);
+  border-radius: 20px;
+  color: hsl(var(--clr-orange));
+  padding: 0.4rem 1rem;
+}
+
+.rating-card--thankyou__text {
+  text-align: center;
 }

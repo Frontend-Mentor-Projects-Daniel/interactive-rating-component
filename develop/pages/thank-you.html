@@ -20,10 +20,10 @@
     />
 
     <!-- custom CSS -->
-    <link rel="stylesheet" href="./develop/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
     <!-- custom JS -->
-    <link rel="stylesheet" href="./develop/js/script.js" />
+    <link rel="stylesheet" href="../js/script.js" />
 
     <title>Frontend Mentor | Interactive rating component</title>
 
@@ -38,13 +38,27 @@
     </style>
   </head>
   <body>
-    <!-- You selected -->
-    <!-- Add rating here -->
-    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don’t hesitate to get in touch! -->
+    <!-- TODO: Delete the un-needed classes if they are simply sharing the rating card's classes -->
     <main class="main">
-      <div class="rating-card">
-        <h1>THANK YOU</h1>
+      <div class="rating-card rating-card--thankyou">
+        <!-- image -->
+        <div class="thankyou-icon">
+          <img src="../images/illustration-thank-you.svg" alt="" />
+        </div>
+
+        <!-- user rating selection text -->
+        <p class="rating-card--thankyou__selection">
+          You selected <span data-rating-selection>4</span> out of 5
+        </p>
+
+        <!-- thank you title -->
+        <h1 class="rating-card--thankyou__title rating__title">Thank you!</h1>
+
+        <!-- thank you text -->
+        <p class="rating__text rating-card--thankyou__text">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
       </div>
     </main>
 
